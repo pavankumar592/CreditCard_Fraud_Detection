@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-credit_card = pd.read_csv("/Users/yoonhakim/Desktop/UBC/Project/CreditCard_Fraud_Detection/Data/creditcard.csv")
+credit_card = pd.read_csv("/Users/yoonhakim/Desktop/UBC/Project/Credit_Card_Fraud_Detection/Data/creditcard.csv")
 
 # train test split 
 from sklearn.model_selection import train_test_split
@@ -96,3 +96,18 @@ mean_absolute_error(y_test,tpred_ridge) #0.003439
 mean_absolute_error(y_test,tpred_gb) #0.00094 
 
 mean_absolute_error(y_test,(tpred_logit+tpred_gb)/2) # 0.00115
+
+# Productionization
+
+import pickle
+pickl = {'model': gb}
+pickle.dump( pickl, open( 'model_file' + ".p", "wb" ) )
+
+file_name = "model_file.p"
+with open(file_name, 'rb') as pickled:
+    data = pickle.load(pickled)
+    model = data['model']
+
+model.predict(np.array(list(X_test.iloc[1,:])).reshape(1,-1))[0]
+
+list(X_test.iloc[1,:])
