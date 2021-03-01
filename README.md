@@ -12,9 +12,9 @@
 ## Explanatory Data Analysis
 
 I looked at the histograms of data, the correlation between predictor variables, and the pivot table. Below are a few highlights.
-![alt text](https://github.com/yoonhaK/CreditCard_Fraud_Detection/blob/main/Histogram.png)
-![alt text](https://github.com/yoonhaK/CreditCard_Fraud_Detection/blob/main/Correlation%20Matrix.png)
-![alt text](https://github.com/yoonhaK/CreditCard_Fraud_Detection/blob/main/Pivot%20Table.png)
+<img src="https://github.com/yoonhaK/CreditCard_Fraud_Detection/blob/main/Histogram.png" width="400"/>
+<img src="https://github.com/yoonhaK/CreditCard_Fraud_Detection/blob/main/Correlation%20Matrix.png" width="400"/>
+<img src="https://github.com/yoonhaK/CreditCard_Fraud_Detection/blob/main/Pivot%20Table.png" width="600"/>
 
 ## Model building
 I tried four different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret.
